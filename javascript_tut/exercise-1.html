@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let guess = Math.round(Math.random() * 100);
+        // console.log(guess);
+        let num;
+        let chances=0;
+        do {
+            num = prompt("guess the number");
+            num = Number.parseInt(num);
+            if (num > guess) {
+                alert("number is high");
+
+            } else if (num < guess) {
+                alert("number is low");
+                // console.log("you guessed correct number");
+
+            }
+            chances++;
+        } while (num != guess);
+
+        let score=100-chances
+
+     if(num=guess){
+            console.log("you guessed correct number and scores are"+" "+score);
+
+        } 
+
+
+
+
+
+    </script>
+</body>
+
+</html>
