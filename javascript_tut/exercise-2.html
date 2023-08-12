@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let arr=["snake","water","gun"];
+        let input;
+        let poscomputer;
+        let computer=0;
+        let user=0;
+        for (let i = 0; i < arr.length; i++) {
+            input=prompt("enter your choice snake, water, gun".toLowerCase());
+            poscomputer=Math.floor(Math.random()*3);
+
+            if (arr[poscomputer]=='snake' && input=='water' ) {
+                computer++;
+            }     else if(arr[poscomputer]=='water' && input=='snake'){
+        user++;
+    }else if(arr[poscomputer]=='snake' && input=='gun'){
+        user++
+    }
+    else if(arr[poscomputer]=='gun' && input=='snake'){
+        computer++
+    }
+    else if(arr[poscomputer]=='water' && input=='gun'){
+        user++
+    }
+    else if(arr[poscomputer]=='gun' && input=='water'){
+        computer++
+    }      
+        }
+
+        console.log("the points ofd computer is"+computer);
+        console.log("the points ofd user is"+user);
+        if (computer>user) {
+        console.log("the points ofd computer is"+computer+" "+" computer wins");
+        } else if(computer<user){
+            console.log("the points of user is"+user+" "+" user wins"); 
+        }else{
+            console.log("match draw"); 
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        this is container
+        <h1 id="time"></h1>
+        
+    </div>
+    
+    <script>
+        console.log("hello");
+        // let bdate=new Date();
+        // let bdate=new Date(2020,10,13,17,53,1000);
+        let bdate=new Date();
+        let yr=bdate.getFullYear();
+        let time=bdate.getHours();
+        let mth=bdate.getMonth();
+        let day=bdate.getDay();
+
+        console.log(bdate);
+        console.log(yr);
+        console.log(time);
+        console.log(mth);
+        console.log(day);
+        bdate.setDate(2029);
+        console.log(bdate);
+        setInterval(mydate,1000);
+
+
+        function mydate() {
+            document.getElementById('time').innerHTML=new Date();
+            
+        }
+
+
+
+    </script>
+</body>
+</html>

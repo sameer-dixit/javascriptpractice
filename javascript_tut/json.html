@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myjsonobj={
+            name:"sameer",
+            age:18,
+            student:"mca"
+        }
+        let myjsonstr=JSON.stringify(myjsonobj);
+        console.log(myjsonstr);
+        console.log(typeof(myjsonstr));
+
+        myjsonstr=myjsonstr.replace("sameer","sameer Dixit");
+        myjsonstr=myjsonstr.replace("18","23");
+        console.log(myjsonstr);
+
+        let mynewjsonobj=JSON.parse(myjsonstr);
+        console.log(mynewjsonobj);
+    </script>
+</body>
+</html>
